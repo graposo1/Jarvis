@@ -11,3 +11,7 @@ In the TheBot class:
 1. Change GPT4All_Exe_Location and GPT4ALL_Model_Location to the desired location.
 
 2. Change whisperFactory location.
+
+Usage:
+
+Press R and say something on the mic. The input will be processed by whisperer and then sent to GPT4ALL.
