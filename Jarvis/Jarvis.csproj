@@ -21,4 +21,8 @@
     <PackageReference Include="Whisper.net" Version="1.2.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="builds\v01\" />
+  </ItemGroup>
+
 </Project>

@@ -8,9 +8,9 @@ namespace Jarvis
 {
     internal class TheBot
     {
-        WhisperFactory whisperFactory = WhisperFactory.FromPath(@"location\...\ggml-model-whisper-base.bin");
-        string GPT4All_Exe_Location = @"C:\...\gpt4all-lora-quantized-win64.exe";
-        string GPT4ALL_Model_Location = @"C:\...\gpt4all-lora-quantized.bin";
+        WhisperFactory whisperFactory = WhisperFactory.FromPath(AppDomain.CurrentDomain.BaseDirectory + "ggml-model-whisper-base.bin");
+        string GPT4All_Exe_Location = AppDomain.CurrentDomain.BaseDirectory + "gpt4all-lora-quantized-win64.exe";
+        string GPT4ALL_Model_Location = AppDomain.CurrentDomain.BaseDirectory + "gpt4all-lora-quantized.bin";
         WhisperProcessor processor;
         WaveFileWriter writer;
         WaveInEvent waveInEvt;
