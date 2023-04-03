@@ -18,4 +18,4 @@ Press R and say something on the mic. The input will be processed by whisperer a
 
 ## Testing the v01 build:
 
-Place whisperer model and gpt4all-lora-quantized.bin inside the folder. 
+Place ggml-model-whisper-base.bin and gpt4all-lora-quantized.bin inside the folder. 
