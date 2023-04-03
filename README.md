@@ -1,9 +1,9 @@
 # Jarvis
 ## GPT4ALL .net wrapper
 
-Get the whisperer models from here: https://github.com/ggerganov/whisper.cpp and place them inside the "models" folder.
+Get the whisperer models from here: https://github.com/ggerganov/whisper.cpp
 
-Get gpt4all-lora-quantized.bin and the .exe from here https://github.com/nomic-ai/gpt4all.
+Get gpt4all-lora-quantized.bin and the .exe from here https://github.com/nomic-ai/gpt4all
 
 
 In the TheBot class:
