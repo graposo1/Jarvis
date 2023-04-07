@@ -1,6 +1,4 @@
 ﻿using Jarvis;
-using System.Diagnostics;
-using Whisper.net;
 
 TheBot bot = new TheBot();
 
@@ -9,3 +7,11 @@ while (Console.ReadKey(true).Key == ConsoleKey.R)
 {
     bot.ReadVoice();
 }
+
+//Api api = new Api();
+
+//while (Console.ReadKey(true).Key == ConsoleKey.R)
+//{
+//    api.Prompt("Hello");
+//}
+

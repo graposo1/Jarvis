@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Speech.Synthesis;
 using System.Text.RegularExpressions;
 using Whisper.net;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Jarvis
 {
@@ -49,11 +50,12 @@ namespace Jarvis
             if (e.Data != null)
             {
                 var txt = Regex.Replace(e.Data, @"\e\[(\d+;)*(\d+)?[ABCDHJKfmsu]", "");
+
+                Console.WriteLine("received output: {0}", txt);
+
                 var synthesizer = new SpeechSynthesizer();
                 synthesizer.SetOutputToDefaultAudioDevice();
                 synthesizer.Speak(txt);
-
-                Console.WriteLine("received output: {0}", txt);
             } else
             {
                 Console.WriteLine("No output");
@@ -92,10 +94,11 @@ namespace Jarvis
         /// <param name="e"></param>
         private void OnNewSegment(SegmentData e)
         {
-            Console.WriteLine(e.Text);
+            Console.WriteLine("SEGMENT: " + e.Text);
 
             //Send data to GPT
             process.StandardInput.WriteLine("Write-Host " + e.Text);
+            Console.WriteLine("PROCESSING...");
         }
         
         private void StopRecord()
