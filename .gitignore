@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Jarvis/builds/v01/gpt4all-lora-quantized.bin
+/Jarvis/builds/v01/ggml-model-whisper-base.bin
+/Jarvis/builds/v01/filerecorded.wav
