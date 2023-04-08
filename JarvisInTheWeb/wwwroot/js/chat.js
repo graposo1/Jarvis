@@ -6,7 +6,6 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/ChatHub").build();
 document.getElementById("promptBtn").disabled = true;
 
 connection.on("ReceiveMessage", function (user, message) {
-    var li = document.createElement("li");
 
     var li = $("<div class=\"row\"><div class=\"col-sm-1\">" + user + ":</div>" +
         "<div class=\"col-sm\">" +
@@ -15,26 +14,29 @@ connection.on("ReceiveMessage", function (user, message) {
 
     $("#messagesList").append(li);
 
-    $("#messagesList").scrollTop($("#messagesList").prop("scrollHeight"));
+    var gpt = $("<div class=\"row gptMessage\"><div class=\"col-sm-1\">GPT:</div>" +
+        "<div class=\"col-sm\">" +
+        "</div></div>");
 
-    // We can assign user-supplied strings to an element's textContent because it
-    // is not interpreted as markup. If you're assigning in any other way, you 
-    // should be aware of possible script injection concerns.
+    $("#messagesList").append(gpt);
+
+    $("#messagesList").scrollTop($("#messagesList").prop("scrollHeight"));
 });
 
-connection.on("ReceiveMessageGPT", function (user, message) {
-    var li = $("<div class=\"row\"><div class=\"col-sm-1\" class=\"gptMessage\">GPT:</div>" +
-        "<div class=\"col-sm\" style=\"color:#007cff\">" +
+connection.on("ReceiveMessageGPTNewLine", function (user, message) {
+    var li = $("<div class=\"row gptMessage\"><div class=\"col-sm-1\">GPT:</div>" +
+        "<div class=\"col-sm\">" +
         message + 
         "</div></div>");
 
     $("#messagesList").append(li);
 
     $("#messagesList").scrollTop($("#messagesList").prop("scrollHeight"));
+});
 
-    // We can assign user-supplied strings to an element's textContent because it
-    // is not interpreted as markup. If you're assigning in any other way, you 
-    // should be aware of possible script injection concerns.
+connection.on("ReceiveMessageGPTContinue", function (user, message) {
+    $("#messagesList").find(".gptMessage:last").find(".col-sm").append(message);
+    $("#messagesList").scrollTop($("#messagesList").prop("scrollHeight"));
 });
 
 connection.start().then(function () {
