@@ -19,3 +19,9 @@ Press R and say something on the mic. The input will be processed by whisperer a
 ## Testing the v01 build:
 
 Place ggml-model-whisper-base.bin and gpt4all-lora-quantized.bin inside the folder. 
+
+## Web Version JarvisInTheWeb
+MVC net 6 with signalR
+
+![image](https://user-images.githubusercontent.com/11161818/230697175-52b7efd6-edb5-4328-9350-7567c95e46b1.png)
+
