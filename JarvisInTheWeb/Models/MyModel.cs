@@ -1,4 +1,4 @@
-﻿namespace JarvisInTheWeb.Models
+﻿namespace JarvisOnTheWeb.Models
 {
     public class MyModel
     {

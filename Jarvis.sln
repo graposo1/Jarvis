@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jarvis", "Jarvis\Jarvis.csproj", "{AE69BFE2-D5D3-40C6-A9E9-5FD8D51BA3EB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JarvisInTheWeb", "JarvisInTheWeb\JarvisInTheWeb.csproj", "{7CF6DE5A-2A5C-4782-8B06-9F3EA4C9A6C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JarvisOnTheWeb", "JarvisInTheWeb\JarvisOnTheWeb.csproj", "{7CF6DE5A-2A5C-4782-8B06-9F3EA4C9A6C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

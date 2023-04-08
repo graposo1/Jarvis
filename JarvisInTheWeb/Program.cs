@@ -1,5 +1,5 @@
-using JarvisInTheWeb;
-using JarvisInTheWeb.Hubs;
+using JarvisOnTheWeb;
+using JarvisOnTheWeb.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 

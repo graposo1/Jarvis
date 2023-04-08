@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace JarvisInTheWeb.Controllers
+namespace JarvisOnTheWeb.Controllers
 {
     public class HomeController : Controller
     {

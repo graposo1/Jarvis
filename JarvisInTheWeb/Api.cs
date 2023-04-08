@@ -1,4 +1,4 @@
-﻿using JarvisInTheWeb.Hubs;
+﻿using JarvisOnTheWeb.Hubs;
 using Microsoft.AspNetCore.SignalR;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;

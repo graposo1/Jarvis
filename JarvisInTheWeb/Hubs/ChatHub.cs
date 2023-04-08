@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 
-namespace JarvisInTheWeb.Hubs
+namespace JarvisOnTheWeb.Hubs
 {
     public class ChatHub : Hub
     {

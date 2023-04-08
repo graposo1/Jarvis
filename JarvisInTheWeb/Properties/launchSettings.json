@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "JarvisInTheWeb": {
+    "JarvisOnTheWeb": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
