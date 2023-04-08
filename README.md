@@ -24,5 +24,5 @@ Place ggml-model-whisper-base.bin and gpt4all-lora-quantized.bin inside the fold
 ## Web Version JarvisOnTheWeb
 MVC net 6 with signalR
 
-![image](https://user-images.githubusercontent.com/11161818/230697175-52b7efd6-edb5-4328-9350-7567c95e46b1.png)
+![image](https://user-images.githubusercontent.com/11161818/230701781-f4195502-d61e-4f9b-8b1b-f061f13247d6.png)
 
