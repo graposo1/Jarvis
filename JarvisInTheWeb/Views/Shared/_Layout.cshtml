@@ -9,6 +9,30 @@
     <link rel="stylesheet" href="~/JarvisInTheWeb.styles.css" asp-append-version="true" />
 
     <script src="~/js/signalr/dist/browser/signalr.js"></script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <style>
+        .chat {
+            max-height: 500px;
+            overflow: auto;
+            font-size: 19px;
+            border: 1px solid #e8e8e8;
+            border-radius: 15px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .sendMessageBox {
+            padding-top: 20px;
+        }
+
+        .gptMessage {
+            color:#007cff;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -30,12 +54,10 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - JarvisInTheWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - JarvisInTheWeb
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
