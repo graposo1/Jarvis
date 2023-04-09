@@ -47,7 +47,7 @@ body {
 
 .chat {
     color: #008f11;
-    max-height: 500px;
+    max-height: calc(100vh - 210px);
     overflow: auto;
     font-size: 19px;
     border: 1px solid #003b00;

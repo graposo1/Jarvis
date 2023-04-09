@@ -7,15 +7,15 @@ document.getElementById("promptBtn").disabled = true;
 
 connection.on("ReceiveMessage", function (user, message) {
 
-    var li = $("<div class=\"row\"><div class=\"col-sm-1\">" + user + ":</div>" +
-        "<div class=\"col-sm\">" +
+    var li = $("<div class=\"row\"><div class=\"col-sm-1 col-2\">" + user + ":</div>" +
+        "<div class=\"col-sm col-10\">" +
         message +
         "</div></div>");
 
     $("#messagesList").append(li);
 
-    var gpt = $("<div class=\"row gptMessage\"><div class=\"col-sm-1\">GPT:</div>" +
-        "<div class=\"col-sm\">" +
+    var gpt = $("<div class=\"row gptMessage\"><div class=\"col-sm-1 col-2\">GPT:</div>" +
+        "<div class=\"col-sm col-10\">" +
         "</div></div>");
 
     $("#messagesList").append(gpt);
@@ -27,8 +27,8 @@ connection.on("ReceiveMessage", function (user, message) {
 });
 
 connection.on("ReceiveMessageGPTNewLine", function (user, message) {
-    var li = $("<div class=\"row gptMessage\"><div class=\"col-sm-1\">GPT:</div>" +
-        "<div class=\"col-sm\">" +
+    var li = $("<div class=\"row gptMessage\"><div class=\"col-sm-1 col-2\">GPT:</div>" +
+        "<div class=\"col-sm col-10\">" +
         message + 
         "</div></div>");
 
