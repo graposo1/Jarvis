@@ -20,8 +20,9 @@ Press R and say something on the mic. The input will be processed by whisperer a
 
 Place ggml-model-whisper-base.bin and gpt4all-lora-quantized.bin inside the folder. 
 
-## Web Version JarvisInTheWeb
+
+## Web Version JarvisOnTheWeb
 MVC net 6 with signalR
 
-![image](https://user-images.githubusercontent.com/11161818/230697175-52b7efd6-edb5-4328-9350-7567c95e46b1.png)
+![image](https://user-images.githubusercontent.com/11161818/230750328-7465d6fc-a651-4c80-bee6-0a34e51799ac.png)
 
