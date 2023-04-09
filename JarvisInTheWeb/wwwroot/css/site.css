@@ -16,3 +16,90 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/*****/
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #008f11;
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #008f11;
+}
+
+body {
+    background: #0d0208 !important;
+    font-family:monospace;
+}
+
+.chat {
+    color: #008f11;
+    max-height: 500px;
+    overflow: auto;
+    font-size: 19px;
+    border: 1px solid #003b00;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar {
+    background: #0d0208 !important;
+}
+
+.sendMessageBox {
+    padding-top: 20px;
+}
+
+.navbar-brand {
+    color: #008f11 !important;
+}
+
+.gptMessage {
+    color: #00ff41;
+}
+
+.prompt {
+    background-color: #0d0208 !important;
+    border: 1px solid #003b00 !important;
+    color: #008f11 !important;
+}
+
+    .prompt:disabled {
+        opacity: 0.4;
+    }
+
+    .prompt:focus, .btn:focus {
+        border-color: rgb(0, 59, 0) !important;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgb(0, 59, 0) !important;
+        outline: 0 none !important;
+    }
+
+.btn {
+    color: #008f11 !important;
+    border-color: #003b00 !important;
+    background: #0d0208 !important;
+}
+
+    .btn:disabled {
+        opacity: 0.4;
+    }
+
+    .btn:hover {
+        color: #008f11;
+        border-color: #003b00;
+        background: #0d0208;
+    }

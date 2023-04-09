@@ -14,30 +14,11 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
-    <style>
-        .chat {
-            max-height: 500px;
-            overflow: auto;
-            font-size: 19px;
-            border: 1px solid #e8e8e8;
-            border-radius: 15px;
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
-
-        .sendMessageBox {
-            padding-top: 20px;
-        }
-
-        .gptMessage {
-            color:#007cff;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-mb-3">
+            <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">JarvisOnTheWeb</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -51,12 +32,6 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - JarvisOnTheWeb
-        </div>
-    </footer>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

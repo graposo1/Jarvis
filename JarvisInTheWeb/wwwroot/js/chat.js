@@ -21,6 +21,9 @@ connection.on("ReceiveMessage", function (user, message) {
     $("#messagesList").append(gpt);
 
     $("#messagesList").scrollTop($("#messagesList").prop("scrollHeight"));
+
+    $('#promptBtn').prop('disabled', true);
+    $('#ThePrompt').prop('disabled', true);
 });
 
 connection.on("ReceiveMessageGPTNewLine", function (user, message) {
@@ -30,13 +33,18 @@ connection.on("ReceiveMessageGPTNewLine", function (user, message) {
         "</div></div>");
 
     $("#messagesList").append(li);
-
     $("#messagesList").scrollTop($("#messagesList").prop("scrollHeight"));
 });
 
 connection.on("ReceiveMessageGPTContinue", function (user, message) {
     $("#messagesList").find(".gptMessage:last").find(".col-sm").append(message);
     $("#messagesList").scrollTop($("#messagesList").prop("scrollHeight"));
+
+    if (message == "\n> ") {
+        $('#promptBtn').prop('disabled', false);
+        $('#ThePrompt').prop('disabled', false);
+        $('#ThePrompt').focus().val("");
+    }
 });
 
 connection.start().then(function () {
