@@ -37,7 +37,7 @@ MVC net 6 with signalR
 
 Added a script to run the pyllama library for custom ggml format.
 
-Instruction to install for pyllamacpp: https://github.com/nomic-ai/pyllamacpp
+Instruction to install pyllamacpp: https://github.com/nomic-ai/pyllamacpp
 
 Example model: https://huggingface.co/Pi3141/gpt4-x-alpaca-native-13B-ggml
 
