@@ -45,7 +45,7 @@ Example model: https://huggingface.co/Pi3141/gpt4-x-alpaca-native-13B-ggml
 
 To run python script instead of the GPT4ALL executable, change the following properties:
 
-[Api.cs](JarvisOnTheWeb/Api.cs)
+[Api.cs](https://github.com/graposo1/Jarvis/blob/master/JarvisInTheWeb/Api.cs)
 
 ```csharp
 private bool IsCustomPython = true;
