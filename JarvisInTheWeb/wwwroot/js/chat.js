@@ -56,6 +56,7 @@ connection.start().then(function () {
 document.getElementById("promptBtn").addEventListener("click", function (event) {
     var user = "User";
     var message = document.getElementById("ThePrompt").value;
+
     connection.invoke("SendMessage", user, message).catch(function (err) {
         return console.error(err.toString());
     });

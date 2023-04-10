@@ -10,4 +10,14 @@
     <PackageReference Include="Microsoft.AspNet.SignalR.Client" Version="2.4.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="pythonscripts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="pythonscripts\chat.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

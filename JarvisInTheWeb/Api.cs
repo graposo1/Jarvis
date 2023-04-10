@@ -15,8 +15,13 @@ namespace Api
         string GPT4All_Exe_Location = AppDomain.CurrentDomain.BaseDirectory + "gpt4all-lora-quantized-win64.exe";
         string GPT4ALL_Model_Location = AppDomain.CurrentDomain.BaseDirectory + "gpt4all-lora-quantized.bin";
         private static Api? _instance;
-
         private readonly Microsoft.AspNetCore.SignalR.IHubContext<ChatHub> _hubContext;
+
+        /// <summary>
+        /// To run the python script
+        /// </summary>
+        private bool IsCustomPython = true;
+        private string Python_Model_Location = AppDomain.CurrentDomain.BaseDirectory + "ggml-model-q4_1.bin";
 
         public static Api Instance(IHubContext<ChatHub> ctx)
         {
@@ -31,14 +36,29 @@ namespace Api
         public Api(IHubContext<ChatHub> ctx)
         {
             _hubContext = ctx;
+            ProcessStartInfo processInfo;
 
-            var processInfo = new ProcessStartInfo("powershell.exe")
+            //Custom python program or not.
+            if (!IsCustomPython)
             {
-                RedirectStandardInput = true,
-                UseShellExecute = false,
-                CreateNoWindow = false,
-                Arguments = @"-Command Start-Process -FilePath " + GPT4All_Exe_Location + " -ArgumentList '-m', '" + GPT4ALL_Model_Location + "' -NoNewWindow"
-            };
+                processInfo = new ProcessStartInfo("powershell.exe")
+                {
+                    RedirectStandardInput = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = false,
+                    Arguments = @"-Command Start-Process -FilePath " + GPT4All_Exe_Location + " -ArgumentList '-m', '" + GPT4ALL_Model_Location + "' -NoNewWindow"
+                };
+            }
+            else
+            {
+                processInfo = new ProcessStartInfo("python.exe")
+                {
+                    RedirectStandardInput = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = false,
+                    Arguments = @"pythonscripts\chat.py " + Python_Model_Location
+                };
+            }
 
             process = new Process { StartInfo = processInfo };
             process.StartInfo.RedirectStandardOutput = true;
